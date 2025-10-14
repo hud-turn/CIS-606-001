@@ -1,0 +1,20 @@
+[project]
+name = "cis-606-001"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Hudson Turner",email = "30182083+hud-turn@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ipykernel (>=7.0.1,<8.0.0)",
+    "pandas (>=2.3.3,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "cis_606_001", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
