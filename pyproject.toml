@@ -1,20 +1,19 @@
-[tool.poetry]
+[project]
 name = "cis-606-001"
 version = "0.1.0"
 description = "This is the repo for CIS-606-001. The course introduces students to programming/software development (using Python),data analytics (using Python), IT project management, and cybersecurity. It provides students with a basic understanding of these four critical information technology areas to help them choose among MCIS specializations/certifications and career pathways."
-authors = ["Hudson Turner <30182083+hud-turn@users.noreply.github.com>"]
+authors = [{ name = "Hudson Turner", email = "30182083+hud-turn@users.noreply.github.com" }]
+requires-python = "~=3.12"
 readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.12"
-pandas = "^2.3.3"
-ipykernel = "^7.0.1"
-jupyterlab = "^4.4.9"
-requests = "^2.32.5"
-dotenv = "^0.9.9"
-python-dotenv = "^1.1.1"
-
+dependencies = [
+    "pandas>=2.3.3,<3",
+    "ipykernel>=7.0.1,<8",
+    "jupyterlab>=4.4.9,<5",
+    "requests>=2.32.5,<3",
+    "dotenv>=0.9.9,<0.10",
+    "python-dotenv>=1.1.1,<2",
+]
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
